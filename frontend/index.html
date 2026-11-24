@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Foodie Support • Messages</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- LEFT NAVIGATION RAIL -->
+      <aside class="nav-rail">
+        <div class="nav-logo">◎</div>
+
+        <nav class="nav-items">
+          <div class="nav-item" title="Home">⌂</div>
+          <div class="nav-item" title="Explore">⌕</div>
+          <div class="nav-item" title="Notifications">♡</div>
+          <div class="nav-item active" title="Messages">✉</div>
+          <div class="nav-item" title="Profile">◉</div>
+        </nav>
+      </aside>
+
+      <!-- INBOX SIDEBAR -->
+      <aside class="inbox-sidebar">
+        <div class="inbox-header">
+          <h1>Messages</h1>
+
+          <input
+            type="text"
+            class="search-box"
+            id="searchInput"
+            placeholder="Search"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="inbox-section">
+          <h2>Messages</h2>
+          <span>Requests</span>
+        </div>
+
+        <div class="conversation active" id="conversation">
+          <div class="avatar">
+            <div class="avatar-inner">F</div>
+          </div>
+
+          <div class="conversation-info">
+            <h3>Foodie Support</h3>
+            <p id="conversationPreview">Start a conversation...</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CHAT PANEL -->
+      <main class="chat-panel">
+        <!-- CHAT HEADER -->
+        <header class="chat-header">
+          <div class="chat-user">
+            <div class="avatar">
+              <div class="avatar-inner">F</div>
+            </div>
+
+            <div>
+              <h2>Foodie Support</h2>
+              <p id="headerStatus">Connecting...</p>
+            </div>
+          </div>
+
+          <div class="chat-actions">
+            <button
+              type="button"
+              class="new-chat-button"
+              id="newChatBtn"
+              title="Start a new conversation"
+            >
+              + New Chat
+            </button>
+
+            <button type="button" title="Voice call">⌕</button>
+            <button type="button" title="Information">ⓘ</button>
+          </div>
+        </header>
+
+        <!-- CHAT AREA -->
+        <section class="chat-area" id="chatArea">
+          <!-- WELCOME SCREEN -->
+          <div class="welcome-screen" id="welcomeScreen">
+            <div class="welcome-icon">✉</div>
+
+            <h2>Foodie Support</h2>
+
+            <p>
+              Ask us anything about your food orders, delivery status, payments
+              or cancellations.
+            </p>
+          </div>
+
+          <!-- MESSAGES WILL BE ADDED HERE -->
+          <div id="messages"></div>
+
+          <!-- TYPING INDICATOR -->
+          <div
+            class="typing-indicator"
+            id="typingIndicator"
+            style="display: none"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>
+
+        <!-- MESSAGE COMPOSER -->
+        <footer class="chat-composer">
+          <form id="chatForm">
+            <div class="composer-box">
+              <textarea
+                id="messageInput"
+                placeholder="Message..."
+                rows="1"
+                autocomplete="off"
+                required
+              ></textarea>
+
+              <button type="submit" class="send-button" id="sendButton">
+                Send
+              </button>
+            </div>
+          </form>
+        </footer>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
